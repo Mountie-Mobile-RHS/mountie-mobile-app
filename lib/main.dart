@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Mountie Mobile',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
         useMaterial3: true,
@@ -29,11 +29,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  int _counterFactorial = 1;
 
   void _incrementCounter() {
     setState(() {
-      _counter++;
+      _counterFactorial *= (_counterFactorial + 1);
     });
   }
 
@@ -50,10 +50,10 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Changing this text because why not:',
+              'Factorial Test Button:',
             ),
             Text(
-              '$_counter',
+              '$_counterFactorial',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
